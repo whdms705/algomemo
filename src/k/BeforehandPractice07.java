@@ -1,4 +1,4 @@
-package kakao;
+package k;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;

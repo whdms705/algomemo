@@ -1,4 +1,4 @@
-package kakao;
+package k;
 
 import java.util.ArrayList;
 import java.util.HashSet;

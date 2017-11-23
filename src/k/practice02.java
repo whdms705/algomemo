@@ -1,4 +1,4 @@
-package kakao;
+package k;
 
 public class practice02 {
 

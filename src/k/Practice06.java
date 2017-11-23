@@ -1,4 +1,4 @@
-package kakao;
+package k;
 
 import java.util.Scanner;
 
