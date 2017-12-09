@@ -34,8 +34,10 @@ public class WordGetmiddleEasy {
 		}
 			
 		
+		System.out.println("결과 : "+result);
 		
-		
+		// 아래와 같은 방식으로도 한줄로 처리 할 수 있음 
+		//return word.substring((word.length()-1)/2, word.length()/2 + 1);  
 		
 	}
 
