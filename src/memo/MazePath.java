@@ -27,12 +27,39 @@ public class MazePath {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		findMazePath(0,0);
+		print();
+System.out.println(findMazePath(0,0));
+		print();
 	}
 	
 	public static boolean findMazePath(int x,int y){
 		
-		return false;
+		if(x<0 || y<0 || x>n-1 || y>n-1){
+			return false;
+		}else if(x==n-1&&y==n-1){ // base ±¸°£
+			return true;
+		}else if(maze[x][y]!=PATHWAY_COLOR){
+			return false;
+		}else{
+			maze[x][y]=PATH_COLOR;
+			if(findMazePath(x-1,y)||findMazePath(x,y+1)||findMazePath(x+1,y)||findMazePath(x,y-1)){
+				return true;
+			}
+			maze[x][y]=BLOCKED_COLOR;
+			return false;
+		}
+		
+		
+	}
+	
+	public static void print(){
+		int n=maze.length;
+		for(int i=0;i<n;i++){
+			for(int j=0;j<n;j++){
+System.out.print(maze[i][j]+" ");
+			}
+System.out.println();
+		}
 	}
 
 }
