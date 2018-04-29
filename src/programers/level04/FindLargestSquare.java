@@ -24,7 +24,8 @@ public class FindLargestSquare {
         for(int i=1;i<size;i++){
         	for(int j=1;j<size;j++){
         		if(square[i][j]==1){
-        			square[i][j] = square[i][j]+Math.min(Math.min(square[i-1][j],square[i-1][j-1]),square[i][j-1]);
+        			square[i][j] = square[i][j]+
+        					Math.min(Math.min(square[i-1][j],square[i-1][j-1]),square[i][j-1]);
         			if(square[i][j]>max){
         				max = square[i][j];
         				System.out.println("max : "+max);
