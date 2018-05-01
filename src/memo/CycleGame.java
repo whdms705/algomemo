@@ -12,7 +12,7 @@ public class CycleGame {
 		int[] arr = {1,2,3,4,5,6};
 		
 		int n = arr.length;
-		int d=1;
+		int d=0;
 		int k=7;
 		int j=2;
 		
@@ -27,14 +27,13 @@ public class CycleGame {
 		k=sc.nextInt();
 		j=sc.nextInt();*/
 		ArrayList<Integer> list = new ArrayList<Integer>();
+		if(d==0){
+			arr=reverse(arr);
+			
+		}
 		
 		for(int i=0;i<len;i++){
 			list.add(i);
-		}
-		//System.out.println("list.indexOf() :"+list.indexOf(2));
-		//list.remove(list.indexOf());
-		if(d==0){
-			reverse(arr);
 		}
 		
 		
@@ -65,16 +64,17 @@ public class CycleGame {
 			System.out.println("curIndex : "+curIndex);
 			System.out.println("check : "+check);
 		}
+		
 		System.out.println("list : "+list.get(0));
-		
-		
+		result = arr[list.get(0)];
+		System.out.println("result : "+result);
 	}
 	
 	
 	
 	//int array reverse 
 	public static int[] reverse(int[] arr){
-		int left  = 0;             // 맨 좌측 요소의 첨자
+		int left  = 1;             // 맨 좌측 요소의 첨자
 	    int right = arr.length - 1;  // 맨 우측 요소의 첨자
 
 	    while (left < right) {
@@ -85,10 +85,6 @@ public class CycleGame {
 	      left++; right--;         // 배열의 중간 부분으로 한칸씩 이동
 	    }
 	    
-	    // exchange start index , end index
-	    int temp=arr[0];
-	    arr[0]=arr[arr.length-1];
-	    arr[arr.length-1] = temp;
 	    return arr;
 	}
 
