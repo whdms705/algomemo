@@ -4,10 +4,8 @@ public class JumpCase {
 
 	public int jumpCase(int num) {
         int answer = 0;
-        if(num==1) {
-        	answer=1;
-        }else if(num==2) {
-        	answer=2;
+        if(num<=1) {
+        	answer=num;
         }else {
         	int temp1=1,temp2=1;
 	        for(int i=1;i<num;i++) {
@@ -16,7 +14,7 @@ public class JumpCase {
 	        	temp2=answer;
 	        }
         }
-System.out.println("answer : "+answer);
+
         return answer;
     }
 
