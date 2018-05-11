@@ -30,27 +30,34 @@ public class Caesar {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Caesar c = new Caesar();
-		System.out.println("s는 'a B z', n은 4인 경우: " + c.caesar("a B z", 4));
+		System.out.println("s는 'a B z', n은 4인 경우: " + c.caesar("NnBfwkN VPUuzpjVZJbng TuyklPvnJrewI BlyuulMFIKllDc",32));
 	}
 	
-	public static char convert(String c,int n) { 
-		char ch1 = c.charAt(0);//java String to char
-		int num=(int)ch1+n;
-		if (Character.isUpperCase(ch1) == true) {
-	      if(num>90) {
-	    	  num=65+(num-90-1);
-	      }
-	      
-	  } else if (Character.isLowerCase(ch1) == true) {
-	      if(num>122) {
-	    	  num=97+(num-122-1);
-	      }
-	      
-	  } 
-		
-		
-		char ch2 = (char)num;
-		return ch2;
+	public static String convert(String c,int n) {
+		int leng = c.length();
+		StringBuilder sb = new StringBuilder();
+		for(int i=0;i<leng;i++){
+			
+			char ch1 = c.charAt(i);//java String to char
+			int num=(int)ch1+n;
+			
+			if (Character.isUpperCase(ch1) == true) {
+		      if(num>90) {
+		    	  num=65+(num-90-1);
+		      }
+		      
+		  }else if (Character.isLowerCase(ch1) == true) {
+		      if(num>122) {
+		    	  num=97+(num-122-1);
+		      }
+		      
+		  } 
+			
+			
+			char ch2 = (char)num;
+			sb.append(ch2);
+		}		
+		return sb.toString();
 	}
 
 }
