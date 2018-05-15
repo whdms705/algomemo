@@ -1,5 +1,6 @@
 package programers.level02;
 
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -29,5 +30,6 @@ public class ReverseInt {
 		ReverseInt ri = new ReverseInt();
 		System.out.println(ri.reverseInt(118372));
 	}
+
 
 }
