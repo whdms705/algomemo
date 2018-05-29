@@ -1,5 +1,6 @@
 package memo;
 
+import java.util.Scanner;
 
 /*
  * @Author : Á¶ÀºÈ£
@@ -10,7 +11,16 @@ public class FactorialDemo {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(factorial(3));//5*4*3*2*1
+		Scanner sc = new Scanner(System.in);
+		int num = sc.nextInt();
+		int result=1;
+		
+		for(int i=num;i>0;i--) {
+			result=result*factorial(i);
+		}
+		
+		System.out.println(result);//3!*2!*1!
+		
 	}
 	
 	public static int factorial(int n) {
