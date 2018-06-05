@@ -16,7 +16,7 @@ public class FactorialDemo {
 		int result=1;
 		
 		for(int i=num;i>0;i--) {
-			result=result*factorial(i);
+			result=result*factorial(i); // f = f(n-1)*n!
 		}
 		
 		System.out.println(result);//3!*2!*1!
